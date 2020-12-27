@@ -34,6 +34,7 @@ body.lock {
   top: 0;
   left: 0;
   z-index: 80;
+  margin-bottom: -150px;
 }
 .header::before {
   content: "";
@@ -184,6 +185,7 @@ body.lock {
   align-items: center;
   justify-content: space-between;
   width: 165px;
+  z-index: 3;
 }
 @media (max-width: 1010px) {
   .socials {
@@ -211,9 +213,99 @@ body.lock {
 .socials__circle:hover {
   opacity: 1;
 }
+@media (max-width: 1010px) {
+  .socials__circle {
+    margin-bottom: 10px;
+  }
+}
 .socials__icon {
   color: #fff;
   display: inline-block;
   text-decoration: none;
   opacity: 1;
+}
+
+.header-slider__item {
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header-slider__item:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+  opacity: 0.7;
+}
+
+.header-slider .slick-arrow {
+  display: none;
+}
+
+.header-slider .slick-dots {
+  position: absolute;
+  bottom: auto;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.header-slider .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+.header-slider .slick-dots li.slick-active button {
+  background: white;
+  outline: none;
+}
+.header-slider .slick-dots button {
+  width: 9px;
+  height: 9px;
+  background: transparent;
+  border: 1px white solid;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.header-heading {
+  position: absolute;
+  top: calc(50% - 150px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 970px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 3;
+}
+.header-heading__title {
+  font-family: "GothamBold";
+  font-size: 80px;
+  letter-spacing: 0.05em;
+}
+.header-heading__description {
+  font-family: "GothamBook";
+  font-size: 18px;
+  letter-spacing: 0.3em;
+}
+.header-heading__here {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 3;
+}
+.header-heading__here::hover {
+  text-decoration: underline;
 }
