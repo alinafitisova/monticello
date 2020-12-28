@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta
       title="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      content="width=device-width, initial-scale=1.0"
     />
     <title>Monticello</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -19,7 +19,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
     <header class="header">
         <div class="container">
             <div class="header__body">
-                <a href="" class="header__logo">
+                <a href="/" class="header__logo">
                     <img src="img/Logo.svg" alt="logo"></a> 
                 <!-- /.header__logo -->
                 <div class="header__burger">
@@ -29,7 +29,6 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li>
-                            
                             <a href="#about" class="header__link"><span class="header__bullet"></span> About Us </a>
                             <!-- /.header__link -->
                         </li>
@@ -45,10 +44,8 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
                             <a href="#contact" class="header__link"><span class="header__bullet"></span> contact</a> 
                             <!-- /.header__link -->
                         </li>
-                        
                     </ul>
                     <!-- /.header__list -->
-                    
                 </nav>
                 <!-- /.header__menu -->
                 <div class="socials">
@@ -59,7 +56,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
                         <a class="socials__icon" href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                     <div class="socials__circle">
-                         <a class="socials__icon" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="socials__icon" href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <!-- /.socials -->
@@ -70,8 +67,9 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
      </header>
     <!-- /.header -->
     <div class="header-slider">
-        <div class="header-slider__item" style="background-image: url('img/header-slide1.png')">
+          <div class="header-slider__item" style="background-image: url('img/header-slide1.png')">
             <div class="header-heading">
+                <a href="#projects" class="header-slider__arrow"></a>
               <h2 class="header-heading__title">
                 Simple & mordern
               </h2>
@@ -83,8 +81,9 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div
         class="header-slider__item" style="background-image: url('img/header-slide2.jpg')">
             <div class="header-heading">
+                <a href="#projects" class="header-slider__arrow"></a>
                 <h2 class="header-heading__title">
-                    Modern architecture today
+                    Modern architecture
                 </h2>
                 <p class="header-heading__description">in the new version it serves as an adapter in the fusion between technology, civilization and wildlife.</p>
             </div>
@@ -94,6 +93,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div
         class="header-slider__item" style="background-image: url('img/header-slide3.jpg')">
             <div class="header-heading">
+                <a href="#projects" class="header-slider__arrow"></a>
                 <h2 class="header-heading__title">
                     New design style
                 </h2>
@@ -105,6 +105,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <div
         class="header-slider__item" style="background-image: url('img/header-slide4.jpg')">
             <div class="header-heading">
+                <a href="#projects" class="header-slider__arrow"></a>
                 <h2 class="header-heading__title">
                     MINIMALIST
                 </h2>
@@ -115,10 +116,11 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <!-- /.header-slider__item -->
         <div class="header-slider__item" style="background-image: url('img/header-slide5.jpg')">
             <div class="header-heading">
+                <a href="#projects" class="header-slider__arrow"></a>
                 <h2 class="header-heading__title">
                     Need more inspiration?
                 </h2>
-                <p class="header-heading__description"> Discover our complete guide to Contemporary design</p><a class="header-heading__here"href="/">here</a>
+                <p class="header-heading__description"> Discover our complete guide to Contemporary design</p>
             </div>
             <!-- /.header-heading -->
         </div>
@@ -128,12 +130,56 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 
      <main class="main">
-         <section class="about1" id="about">
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla explicabo voluptas odio corporis sequi soluta deserunt inventore aliquid! Ea fugiat tempora dignissimos officiis quae quis, consectetur illo mollitia earum recusandae id nihil atque voluptatibus, commodi eos minus, minima laboriosam ad debitis voluptatum porro. Sequi excepturi fugiat voluptatibus quos, inventore, quis voluptate veritatis quae ullam quo fuga esse hic. Sapiente iste quae fugit, aliquid dignissimos suscipit minus atque soluta laudantium doloremque quasi maxime, sed provident sequi ipsam obcaecati iusto labore error! Ipsam atque perferendis laborum, repudiandae corporis porro doloribus quo obcaecati molestiae nobis facilis, aut, magnam vero. Inventore velit, architecto consequatur, dolores aliquid odio ad vel molestias cupiditate quasi beatae nihil enim officiis modi sed ex assumenda dicta minima sequi maxime quam adipisci fugit. Quis accusantium qui nobis omnis consequatur, eaque asperiores commodi. Ex voluptas quia qui enim quod quisquam quo fuga maiores sapiente, nisi laboriosam perspiciatis amet saepe dolorum, voluptatum perferendis, magni tenetur similique hic deserunt. Repudiandae magnam quis ex laborum quos iusto adipisci vitae quibusdam ipsa accusamus perspiciatis nam asperiores optio sed incidunt quod fugit, beatae quas nihil. Necessitatibus reprehenderit magni doloribus voluptatum iusto id aliquam ut sit voluptate ipsam vitae, tempora sequi quibusdam. Atque tempore ullam cumque qui.</p>
+         <section class="about" id="about">
+            <div class="container">
+                <h2 class="about__title">what we do</h2>
+                <div class="about__box">
+                    <div class="about__inner about__inner--left">
+                        <div class="about__img about__img--left"><img src="img/aboutLeft.jpg" alt="architecture"></div>
+                    </div>
+                    <!-- /.about1__left -->
+                    <div class="about-right">
+                        <div class="about__column">
+                            <p class="about__subtitle">one world</p>
+                            <h3 class="about__title without-line">trade center</h3>
+                            <div class="about__description">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</div>
+                            <a href="/" class="btn">more detalis</a>
+                            <p class="about__location"><i class="fas fa-map-marker-alt"></i> New York City, United States - 1776 feet</p>
+                        </div>
+                        <!-- /.bout1__column -->
+                    </div>
+                    <!-- /.about1-right -->
+                </div>
+                <!-- /.about1__box -->
+            </div>
+            <!-- /.container -->
          </section>
-         <!-- /.about1 -->
-         <section class="about2"></section>
-         <!-- /.about2 -->
+         <!-- /.about -->
+         <section class="about">
+            <div class="container">
+                <h2 class="about__title">what we do</h2>
+                <div class="about__box">
+                    <div class="about__left">
+                        <div class="about__column">
+                            <p class="about__subtitle">International</p>
+                            <h3 class="about__title">Commerce Centre</h3>
+                            <div class="about__description">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</div>
+                            <a href="/" class="btn">more detalis</a>
+                            <p class="about__location"><i class="fas fa-map-marker-alt"></i> Hong Kong - 1588 Feet</p>
+                        </div>
+                        <!-- /.bout1__column -->
+                    </div>
+                    <!-- /.about1__left -->
+                    <div class="about__inner about__inner--right">
+                        <div class="about__img about__img--right"><img src="img/aboutRight.jpg" alt="architecture"></div>
+                    </div>
+                    <!-- /.about1-right -->
+                </div>
+                <!-- /.about1__box -->
+            </div>
+            <!-- /.container -->
+         </section>
+         <!-- /.about -->
          <section class="projects" id="projects"></section>
          <!-- /.projects -->
          <section class="news" id="news"></section>
@@ -145,8 +191,8 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
 
 
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js" defer ></script>
+    <script src="js/slick.min.js" defer ></script>
+    <script src="js/main.js" defer ></script>
 </body>
 </html>

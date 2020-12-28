@@ -1,0 +1,46 @@
+$mainCol: #2c4058;
+
+@mixin title ($col , $bg) {
+    font-family: "GothamMedium",serif;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: $col;
+    text-align: center;
+    position: relative;
+    &::before{
+            content: '';
+            display: block;
+            background-color: $bg;
+            position: absolute;
+            left: 50%;
+            top: -40px;
+            width: 100px;
+            height: 1px;
+            z-index: 5;   
+    }
+  }
+  @mixin text  {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #4b5562;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+  }
+  @mixin btn {
+    border: 1px $mainCol solid;
+    text-transform: uppercase;
+    max-width: 188px;
+    height: 48px;
+    text-decoration: none;
+    color: $mainCol;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      opacity: 0.9;
+      transition: 0.3s;
+      transform: skew(-10deg);
+    }
+  }
+  

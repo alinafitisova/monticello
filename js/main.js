@@ -3,6 +3,7 @@
         $('.header__burger, .header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     });
+
     $('.header-slider').slick({
         dots: true,
         arrows : false,

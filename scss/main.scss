@@ -1,3 +1,7 @@
+@import "mixins.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
 @font-face {
     font-family: "GothamMedium";
     src: url("../fonts/gotham-medium.woff2") format("woff2"),
@@ -21,7 +25,7 @@
   body{
       height: 100%;
       font-family: GothamBold;
-      background:rgb(46, 180, 174);
+      scroll-behavior: smooth;
       &.lock{
           @media (max-width: 767px)  {
            overflow: hidden;
@@ -33,25 +37,20 @@
       max-width: 1180px;
       margin: auto;
       padding: 0 10px;
+      @media (max-width: 767px) {
+          padding: 0 30px;
+      }
   }
   
                     // -------------HEADER--------------//
   .header {
-    //   position: fixed;
-      width: 100%;
+     width: 100%;
       top: 0;
       left: 0;
-      z-index: 80;
+      z-index: 10;
       margin-bottom: -150px;
-      &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: transparent;
-          z-index: 2;
+      @media (max-width: 767px) {
+          margin: 21px  0px  -150px  0px;
       }
       &__body {
           position: relative;
@@ -88,8 +87,12 @@
           display: flex;
           align-items: center;
           margin: 0px  0px  0px  20px;
+          &:hover{
+            background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%)
+        }
           @media (max-width: 767px) {
               margin: 0px  0px  20px  0px;
+              
           }
       }
       &__link {
@@ -99,7 +102,11 @@
           font-size: 14px;
           line-height: 22px;
           text-decoration: none;
-         
+          @media (max-width: 767px) {
+              &:hover {
+                  
+              }
+          }
       }
       &__bullet  {
           display: inline-block;
@@ -118,6 +125,16 @@
       }
       &__burger {
           display: none;
+          @media (max-width: 767px) {
+            display: block;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 30px;
+            height: 20px;
+            z-index: 21;
+            cursor: pointer;
+          }
       &:before,
       &:after {
           content: '';
@@ -142,16 +159,7 @@
           transform: rotate(-45deg);
           bottom: 9px;
       }
-      @media (max-width: 767px) {
-              display: block;
-              position: relative;
-              width: 30px;
-              height: 20px;
-              position: relative;
-              z-index: 3;
-  
-          }
-      }
+    }
       &__burger span {
           position: absolute;
           background-color: #fff;
@@ -166,18 +174,22 @@
       }
       &__menu {
           @media (max-width: 767px) {
+          display: block;
           position: fixed;
-          top: -116%;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          top: -106%;
+          right: 0;
+          width: 30%;
+          height: 50%;
           overflow: auto;
-          background: rgb(46, 180, 174);
+          background: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
+          opacity: 0.9;
           transition: all 0.3s ease 0s;
-          padding: 70px  10px  20px  10px;
+          padding: 42px  0px  0px  0px;
+          z-index: 4;
           }
           &.active{
-              top: 0;
+            top: 0px;
+            right: 0;
           }
       }
   }
@@ -222,6 +234,39 @@
  
 
               // -------------HEADER-SLIDER--------------//
+.header-slider {
+    position: relative;
+}   
+
+.header-slider__arrow {
+    display: block;
+    text-decoration: none;
+    width: 38px;
+    height: 38px;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 50%;
+    opacity: 0.702;
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    z-index: 5;
+    outline: none;
+    &::after{
+        content: '';
+        background: transparent;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 14px;
+        left: 16px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        z-index: 5;
+    }
+}
 
 .header-slider__item {
     height: 100vh;
@@ -239,7 +284,7 @@
         left: 0;   
         background: transparent;
         background-image: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
-        opacity: 0.7;
+        opacity: 0.8;
     }
 }
 
@@ -253,6 +298,7 @@
     right: 15px;
     transform: translateY(-50%);
     z-index: 3;
+    outline: none;
     
       
     & li{
@@ -284,7 +330,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 970px;
+    max-width: 90%;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -300,15 +346,74 @@
         letter-spacing: .3em;
         
     }
-    &__here{
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
-        z-index: 3;
-        &::hover{
-            text-decoration: underline;
-        }
+}
+
+
+//   -------------SECTION ABOUT -------------------//
+.about {
+    height: 100vh;
+    margin-top: 90px;
+
+    &__title {
+    @include title ($mainCol ,$mainCol);
+    
+    }   
+    &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    &__img {
+        max-width: 100%;
+        flex-basis: 50%;
+    }
+    &__subtitle {
+        font-family: "GothamBook";
+        color: $mainCol;
+        text-transform: uppercase;
+        font-size: 22px;
+        
+    }
+    &__description {
+        @include text;
+    }
+    
+}
+.without-line{
+    text-align: left;
+    &::before{
+    content: '';
+    display: none;
     }
 }
 
-  
+.about__inner {
+    flex-basis: 50%;
+}
+.about__inner--left {
+}
+
+.about__img--left {
+}
+.about-right {
+    text-align: left;
+}
+.about__column {
+}
+
+
+.btn {
+    @include btn;
+}
+.about__location {
+}
+.fas {
+}
+.fa-map-marker-alt {
+}
+.about__left {
+}
+.about__inner--right {
+}
+.about__img--right {
+}
