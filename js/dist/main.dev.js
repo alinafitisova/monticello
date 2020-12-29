@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
   $('.slider-projects').slick({
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     dots: true,
     responsive: [{
       breakpoint: 1450,

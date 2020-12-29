@@ -251,6 +251,7 @@
     top: 83%;
     z-index: 5;
     outline: none;
+
     &::after{
         content: '';
         background: transparent;
@@ -266,6 +267,11 @@
         transform: rotate(45deg);
         z-index: 5;
     }
+        &:hover{
+            background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%);
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
 }
 
 .header-slider__item {
@@ -300,7 +306,6 @@
     z-index: 3;
     outline: none;
     
-      
     & li{
         list-style: none;
         margin: 0 10px;
@@ -358,6 +363,7 @@
     &__title {
     @include title ($mainCol ,$mainCol);
     margin: 0px  0px  0px  0px;
+    position: relative;
     
     }   
     &__box {
@@ -436,31 +442,47 @@
 //   -------------SECTION projects -------------------//
 
 .projects {
+    height: 100vh;
+    box-sizing:border-box;
+    padding: 180px 215px 0 215px;
+    margin: 0px  0px  0px  0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__title {
       @include title (#fff, #fff);
     }
 }
 .project-slide{
-    height: 100%;
+    max-width: 370px;
+    max-height: 515px;
     position: relative;
-    margin: 0 auto; 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 0px  30px  0px  0px;
     &__img {
-        flex-basis: 40%;
-        height: 100%;
+        height: 240px;
         max-width: 100%;
         position: relative;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         box-sizing:border-box;
+        &:hover::before {
+            content: url('../img/hoverPlus.png');
+            display: block;
+            background-color: transparent;
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            cursor: pointer;
+        }    
     }
     &__description{
-        flex-basis: 60%;
+        box-sizing:border-box;
         background: #fff;
-        
+        padding: 23px  0px  0px  22px;
     }
     &__heading {
         font-family: "GothamBold";
@@ -468,9 +490,13 @@
         line-height: 34px;
         text-transform: uppercase;
         color: $mainCol;
+        margin: 0px  0px  0px  0px;
     }
     &__text {
         @include text;
+        min-height: 81px;
+        margin: 3px 0px 0px 0px;
+        overflow: hidden;
     }
     &__by {
         font-family: "GothamBook";
@@ -478,10 +504,14 @@
         justify-content: flex-start;
         align-items: center;
     }
+    &__avatar {
+        margin-right: 20px;
+    }
     &__name {
         font-size: 18px;
         text-transform: uppercase;
         color: $mainCol;
+        margin-bottom: 14px;
     }
     &__date {
         font-size: 14px;
@@ -489,3 +519,177 @@
 
     }
 }
+
+.slick-arrow{
+    position: absolute;
+    top: 37%;
+    z-index: 3;
+    font-size: 0;
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.562);
+    border-radius: 50%;
+    transition: all .15s;
+    outline: none;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+        top: 43%;
+    }
+    @media screen and (max-width: 540px) {
+        top: 103%;
+    }
+    &:hover{
+        background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%)
+    }
+        &:after{
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 34px;
+        transform: rotate(45deg);
+        @media screen and (max-width: 1024px) {
+        width: 4px;
+        height: 4px;
+        top: 19px;
+        }
+        
+    }
+    @media screen and (max-width: 1024px)  {
+        width: 28px;
+        height: 28px;
+    }
+}
+    .slick-prev {
+    left: -80px;
+    @media screen and (max-width: 540px) {
+        left: -50px;
+    }
+    @media screen and (max-width: 280px) {
+        left: -45px
+    }
+    &::after{
+        border-left: 2px solid rgba(255, 255, 255, 0.562);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.562);
+        right: 15px;
+        top: 15px;
+        @media screen and (max-width: 1024px) {
+        left: 21px;
+        }
+
+    }
+  }
+  .slick-next{
+    right:  -60px;
+    @media screen and (max-width: 540px) {
+        right: -40px;
+    }
+    @media screen and (max-width: 280px) {
+        left: 160px
+    }
+    &::after{
+        border-right: 2px solid rgba(255, 255, 255, 0.562);
+        border-top: 2px solid rgba(255, 255, 255, 0.562);
+        right: 15px;
+        top: 15px;
+        @media screen and (max-width: 1024px) {
+        right: 10px;
+        top: 10px;
+        }
+    }
+  }
+  .slider-projects .slick-dots {
+    display: flex;
+    outline: none;
+    position: absolute;
+    top: 87%;
+    right: 34%;
+    & li{
+        list-style: none;
+        margin: 0 10px;
+        &.slick-active button{
+            background: rgb(255, 255, 255);
+            outline: none;
+        }
+    }
+    & button {
+        width: 9px;
+        height: 9px;
+        background: transparent;
+        border: 1px rgb(255, 255, 255) solid;
+        border-radius: 50%;
+        font-size: 0;
+        padding: 0;
+        margin-right: 40px;
+        cursor: pointer;
+    
+    }
+  
+  }
+  //   -------------SECTION GALLERY -------------------//
+
+  .gallery {
+      margin-top: 180px;
+    &__title {
+    @include title ($mainCol ,$mainCol);
+    margin: 0px  0px  100px  0px;
+    position: relative;
+    } 
+    &__body{
+        display: flex;
+        flex-direction: row;
+        // flex-wrap: wrap;
+        @media (max-width: 767px){
+            flex-direction: column;
+        }
+    }
+    &__one {
+        height: auto;
+        max-width: 50%; 
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &:hover::before {
+            content: url('../img/360.png');
+            display: block;
+            background-color: transparent;
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            cursor: pointer;
+            transition: all .3s;
+        } 
+    }
+    &__plenty {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    &__row {
+        display: flex;
+        
+    }
+    &__pic {
+        height: 215px;
+        width: 285px; 
+        max-width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px;
+        &:hover::before {
+            content: url('../img/360.png');
+            display: block;
+            background-color: transparent;
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            cursor: pointer;
+            transition: all .3s;
+        } 
+    }
+  }

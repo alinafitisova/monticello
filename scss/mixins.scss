@@ -38,9 +38,9 @@ $mainCol: #2c4058;
     align-items: center;
     justify-content: center;
     &:hover {
-      opacity: 0.9;
       transition: 0.3s;
-      transform: skew(-10deg);
+      transform: skew(-5deg);
+      background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%);
     }
   }
   
