@@ -424,6 +424,7 @@ body {
 .about {
   height: 100vh;
   margin-top: 90px;
+  overflow: hidden;
 }
 
 .about__title {
@@ -433,6 +434,7 @@ body {
   color: #2c4058;
   text-align: center;
   position: relative;
+  margin: 0px  0px  0px  0px;
 }
 
 .about__title::before {
@@ -459,10 +461,9 @@ body {
           justify-content: space-between;
 }
 
-.about__img {
+.about__img img {
   max-width: 100%;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  z-index: 2;
 }
 
 .about__subtitle {
@@ -475,10 +476,20 @@ body {
 .about__description {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #4b5562;
+  color: #2c4058;
   font-size: 18px;
   line-height: 30px;
   text-align: left;
+}
+
+.about__location {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #2c4058;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  font-style: italic;
 }
 
 .without-line {
@@ -495,8 +506,43 @@ body {
       flex-basis: 50%;
 }
 
-.about-right {
+.about__img--left {
+  position: relative;
+}
+
+.about__img--left::before {
+  content: '';
+  display: block;
+  background-color: #55b7ff;
+  position: absolute;
+  left: -37%;
+  bottom: 10%;
+  width: 585px;
+  height: 470px;
+  z-index: -1;
+}
+
+.about-right,
+.about__left {
   text-align: left;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.about__inner--right {
+  position: relative;
+}
+
+.about__inner--right::after {
+  content: '';
+  display: block;
+  background-color: #7e5aff;
+  position: absolute;
+  right: -31%;
+  bottom: 10%;
+  width: 585px;
+  height: 470px;
+  z-index: -1;
 }
 
 .btn {
@@ -523,5 +569,101 @@ body {
   transition: 0.3s;
   -webkit-transform: skew(-10deg);
           transform: skew(-10deg);
+}
+
+.projects__title {
+  font-family: "GothamMedium",serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.projects__title::before {
+  content: '';
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  width: 100px;
+  height: 1px;
+  z-index: 5;
+}
+
+.project-slide {
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.project-slide__img {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.project-slide__description {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  background: #fff;
+}
+
+.project-slide__heading {
+  font-family: "GothamBold";
+  font-size: 22px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #2c4058;
+}
+
+.project-slide__text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #2c4058;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.project-slide__by {
+  font-family: "GothamBook";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-slide__name {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c4058;
+}
+
+.project-slide__date {
+  font-size: 14px;
+  color: #55b7ff;
 }
 /*# sourceMappingURL=main.css.map */

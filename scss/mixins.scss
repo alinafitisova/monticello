@@ -22,7 +22,7 @@ $mainCol: #2c4058;
   @mixin text  {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    color: #4b5562;
+    color: $mainCol;
     font-size: 18px;
     line-height: 30px;
     text-align: left;

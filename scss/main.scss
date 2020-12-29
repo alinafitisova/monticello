@@ -353,9 +353,11 @@
 .about {
     height: 100vh;
     margin-top: 90px;
+    overflow: hidden;
 
     &__title {
     @include title ($mainCol ,$mainCol);
+    margin: 0px  0px  0px  0px;
     
     }   
     &__box {
@@ -364,8 +366,10 @@
     justify-content: space-between;
     }
     &__img {
-        max-width: 100%;
-        flex-basis: 50%;
+        & img {
+            max-width: 100%;
+            z-index: 2;
+        }
     }
     &__subtitle {
         font-family: "GothamBook";
@@ -377,7 +381,10 @@
     &__description {
         @include text;
     }
-    
+    &__location {
+        @include text;
+        font-style: italic;
+    }
 }
 .without-line{
     text-align: left;
@@ -386,34 +393,99 @@
     display: none;
     }
 }
-
 .about__inner {
     flex-basis: 50%;
 }
-.about__inner--left {
-}
 
 .about__img--left {
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        background-color: rgb(85, 183, 255);
+        position: absolute;
+        left: -37%;
+        bottom: 10%;
+        width: 585px;
+        height: 470px;   
+        z-index: -1;   
+    }
 }
-.about-right {
+.about-right,
+.about__left {
     text-align: left;
+    flex-basis: 50%;
 }
-.about__column {
+.about__inner--right {
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        background-color: rgb(126, 90, 255);
+        position: absolute;
+        right: -31%;
+        bottom: 10%;
+        width: 585px;
+        height: 470px;   
+        z-index: -1;   
+    }
 }
-
-
 .btn {
     @include btn;
 }
-.about__location {
+//   -------------SECTION projects -------------------//
+
+.projects {
+    &__title {
+      @include title (#fff, #fff);
+    }
 }
-.fas {
-}
-.fa-map-marker-alt {
-}
-.about__left {
-}
-.about__inner--right {
-}
-.about__img--right {
+.project-slide{
+    height: 100%;
+    position: relative;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__img {
+        flex-basis: 40%;
+        height: 100%;
+        max-width: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-sizing:border-box;
+    }
+    &__description{
+        flex-basis: 60%;
+        background: #fff;
+        
+    }
+    &__heading {
+        font-family: "GothamBold";
+        font-size: 22px;
+        line-height: 34px;
+        text-transform: uppercase;
+        color: $mainCol;
+    }
+    &__text {
+        @include text;
+    }
+    &__by {
+        font-family: "GothamBook";
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__name {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $mainCol;
+    }
+    &__date {
+        font-size: 14px;
+        color: #55b7ff;
+
+    }
 }
