@@ -13,10 +13,12 @@ $mainCol: #2c4058;
             background-color: $bg;
             position: absolute;
             left: 50%;
-            top: -40px;
+            bottom: 80px;
             width: 100px;
             height: 1px;
-            z-index: 5;   
+            z-index: 5;
+            text-align: center;
+            margin-left: -50px;
     }
   }
   @mixin text  {
@@ -28,6 +30,7 @@ $mainCol: #2c4058;
     text-align: left;
   }
   @mixin btn {
+    font-family: 'GothamBook';
     border: 1px $mainCol solid;
     text-transform: uppercase;
     max-width: 188px;
@@ -38,6 +41,7 @@ $mainCol: #2c4058;
     align-items: center;
     justify-content: center;
     &:hover {
+      color: #fff;
       transition: 0.3s;
       transform: skew(-5deg);
       background: linear-gradient( 45deg, rgba(85, 184, 255, 0.692) 0%, rgba(126, 90, 255, 0.555) 100%);

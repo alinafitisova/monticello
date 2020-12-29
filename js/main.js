@@ -14,30 +14,33 @@
         autoplay: true,
         autoplaySpeed: 3000,
         });
+
         $('.slider-projects').slick({
-            slidesToShow: 3,
-            slidesToScroll: 2,
             dots: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            infinite: true,
             responsive: [
               {
-                breakpoint: 1450,
+                breakpoint: 1220,
                 settings: {
-                  slidesToShow:3,
-                  slidesToScroll:2,
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
                 }
               },
+              
               {
-                breakpoint: 998,
-                settings: {
-                  slidesToShow:2,
-                  slidesToScroll:1,
-                }
-              },
-              {
-                breakpoint: 680,
+                breakpoint: 768,
                 settings: {
                   slidesToShow:1,
                   slidesToScroll:1,
+                  infinite: true,
+                  dots: true
                 }
               }
               
