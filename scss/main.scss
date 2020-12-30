@@ -44,7 +44,7 @@
   
                     // -------------HEADER--------------//
   .header {
-     width: 100%;
+      width: 100%;
       top: 0;
       left: 0;
       z-index: 10;
@@ -63,16 +63,11 @@
           }
       }
       &__logo {
-        //   flex: 1 0 160px;
           overflow: hidden;
           z-index: 3;
           @media (max-width: 767px) {
               flex: 0 0 140px;
           }
-      }
-      &__logo img {
-          max-width: 100%;
-          display: block;
       }
       &__list{
           display: flex;
@@ -102,11 +97,7 @@
           font-size: 14px;
           line-height: 22px;
           text-decoration: none;
-          @media (max-width: 767px) {
-              &:hover {
-                  
-              }
-          }
+          
       }
       &__bullet  {
           display: inline-block;
@@ -178,13 +169,13 @@
           position: fixed;
           top: -106%;
           right: 0;
-          width: 30%;
-          height: 50%;
+          width: 50%;
+          height: 100%;
           overflow: auto;
           background: linear-gradient( 45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%);
           opacity: 0.9;
           transition: all 0.3s ease 0s;
-          padding: 42px  0px  0px  0px;
+          padding: 35px  0px  0px  0px;
           z-index: 4;
           }
           &.active{
@@ -193,6 +184,10 @@
           }
       }
   }
+  .logo  {
+    max-width: 100%;
+    display: block;
+}
   .socials {
       display: flex;
       align-items: center;
@@ -251,6 +246,7 @@
     top: 83%;
     z-index: 5;
     outline: none;
+    margin-left: -20px;
 
     &::after{
         content: '';
@@ -344,12 +340,27 @@
         font-family: "GothamBold";
         font-size: 80px;
         letter-spacing: .05em;
+        @media (max-width: 767px) {
+            font-size: 50px;
+            margin: 90px 0px 0px 0px;
+    }
+    @media screen and (max-width: 424px) {
+            font-size: 40px;
+            margin: 50px 0px 0px 0px;
+    }
         }
     &__description{
         font-family: "GothamBook";
         font-size: 18px;
         letter-spacing: .3em;
-        
+        @media (max-width: 767px) {
+            font-size: 15px;
+            margin: 90px 0px 0px 0px;
+        }
+        @media screen and (max-width: 424px) {
+            font-size: 13px;
+            margin: 50px 0px 0px 0px;
+    }
     }
 }
 
@@ -360,16 +371,21 @@
     margin-top: 90px;
     overflow: hidden;
 
-    &__title {
+    &__title ,
+    &__center{
     @include title ($mainCol ,$mainCol);
-    margin: 0px  0px  0px  0px;
+    margin: 39px 0px 152px 0px;
     position: relative;
-    
     }   
     &__box {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 870px) {
+        flex-direction: column;
+        align-items: center;
+        
+    }
     }
     &__img {
         & img {
@@ -384,56 +400,68 @@
         font-size: 22px;
         
     }
+    &__center {
+        margin: 20px 0px 45px 0px;
+        text-align: left;
+        &::before{
+        content: '';
+        display: none;
+        }
+    }
     &__description {
         @include text;
+        margin-bottom: 40px;
     }
     &__location {
         @include text;
         font-style: italic;
     }
-}
-.without-line{
-    text-align: left;
-    &::before{
-    content: '';
-    display: none;
+    &__btn {
+        margin-bottom: 60px;
     }
 }
-.about__inner {
-    flex-basis: 50%;
-}
-
-.about__img--left {
+.about__img--left ,
+.about__img--right {
     position: relative;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 585px;
+        height: 470px;   
+        z-index: -1;   
+    }
+}
+.about__img--left{
     &::before{
         content: '';
         display: block;
         background-color: rgb(85, 183, 255);
-        position: absolute;
         left: -37%;
         bottom: 10%;
-        width: 585px;
-        height: 470px;   
-        z-index: -1;   
-    }
 }
-.about-right,
-.about__left {
-    text-align: left;
-    flex-basis: 50%;
 }
-.about__inner--right {
-    position: relative;
-    &::after{
+.about__img--right {
+    &::before{
         content: '';
-        display: block;
-        background-color: rgb(126, 90, 255);
-        position: absolute;
+        background-color: #7e5aff;
         right: -31%;
         bottom: 10%;
-        width: 585px;
-        height: 470px;   
-        z-index: -1;   
+     }
+}
+.about__right,
+.about__left {
+    text-align: left;
+    width: 50%;
+    @media screen and (max-width: 870px) {
+        width: 100%;
+        text-align: center;
+    }
+}
+.about__left {
+    margin-right: 70px;
+    @media screen and (max-width: 870px){
+        margin-right: 0;
     }
 }
 .btn {
@@ -658,6 +686,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        margin-right: 10px;
         & img {
             max-width: 100%;
             margin-bottom: 10px;   
@@ -716,6 +745,265 @@
         } 
     }
     &__btn {
-        margin: 47px auto 0;
+        margin: 47px auto 40px;
+    }
+  }
+
+  // ------------ SECTION MAP ----------//
+#map {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+ // ------------ SECTION CONTACT ----------//
+ .visually-hidden {
+     display: none;
+ }
+.contact {
+    display: block;
+    position: absolute;
+    top: 717%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    color: $mainCol;
+    background: #fff url('/img/bgForm.jpg') no-repeat top center / cover;
+    box-shadow: 0 -4px 30px 0 #858585;
+    width: 770px;
+    height: 350px;
+    padding: 90px 60px 0px;
+    margin: 0 auto -200px;
+        @media screen and (max-width: 1024px) {
+        padding: 40px;
+    }
+        @media screen and (max-width: 824px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: static;
+        transform: translate(0);
+        width: 80%;
+        padding: 60px 30px 70px;
+        box-shadow: 0 0 0 0 transparent;
+        }
+        @media screen and (max-width: 600px) {
+        height: auto;
+        }
+        @media screen and (max-width: 475px) {
+        padding: 30px 25px 50px;
+        }
+
+    &__inner {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+  
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+      }
+    }
+  
+    .fas, .far {
+      display: inline-block;
+      width: 24px;
+      text-align: center;
+      color: #7e5aff;
+      font-weight: 900;
+    }
+  
+    &__title {
+      @include title ($mainCol , $mainCol);
+      margin: 0 0 50px 0;
+  
+      @media screen and (max-width: 824px) {
+        margin: 0;
+      }
+  
+      &::before {
+        color: $mainCol;
+      }
+    }
+  
+    &__left,
+    &__right {
+      width: 48%;
+  
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+  
+      @media screen and (max-width: 600px) {
+        margin: 25px auto;
+      }
+    }
+  
+    &__item,
+    &__form-name,
+    &__form-email {
+      font-family: "Gotham Book", Arial, sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      font-style: normal;
+      font-weight: 500;
+      color: $mainCol;
+      text-decoration: none;
+      
+    }
+  
+    &__item {
+  
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+  
+    &__form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    &__name-block,
+    &__email-block {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    &__form-name,
+    &__form-email {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border-width: 0 0 1px 0;
+      border-color: rgba(0, 0, 0, .7);
+      opacity: .5;
+  
+      &:focus {
+        border-color: rgba(0, 0, 0, 1);
+        opacity: 1;
+      }
+    }
+  
+    &__btn {
+     @include btn;
+      width: 140px;
+      margin: 0;
+      padding: 18px 30px;
+      align-self: flex-end;
+      outline: none;
+  
+      @media screen and (max-width: 600px) {
+        align-self: center;
+      }
+    }
+  }
+ // ------------ FOOTER----------//
+ .footer {
+    width: 100%;
+    height: 524px;
+    color: #fff;
+  
+    @media screen and (max-width: 820px) {
+      height: 200px;
+    }
+  
+    @media screen and (max-width: 620px) {
+      height: 180px;
+    }
+  
+    .inner {
+      max-width: 800px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      @media screen and (max-width: 820px) {
+        padding: 20px 10px;
+        flex-direction: column;
+      }
+  
+      @media screen and (max-width: 620px) {
+        width: 90%;
+        padding: 0;
+      }
+    }
+  
+    &__main-block {
+      width: 100%;
+      margin: 34px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+  
+      @media screen and (max-width: 820px) {
+        margin: 20px auto;
+      }
+  
+      @media screen and (max-width: 620px) {
+        margin: 10px auto;
+        height: 120px;
+        flex-direction: column;
+      }
+    }
+  
+    &__social-list {
+      display: flex;
+    }
+  
+    &__bottom-block {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      font-family: "Gotham Book", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 4px;
+  
+      @media screen and (max-width: 820px) {
+        align-self: center;
+      }
+  
+      @media screen and (max-width: 620px) {
+        flex-direction: column;
+      }
+    }
+  
+    &__copyright {
+      padding-right: 20px;
+  
+      @media screen and (max-width: 620px) {
+        padding: 0;
+      }
+    }
+  
+    &__text {
+      border-left: 1px solid #fff;
+      padding-left: 20px;
+  
+      @media screen and (max-width: 620px) {
+        padding: 0;
+        border: none;
+      }
     }
   }

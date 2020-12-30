@@ -1,7 +1,7 @@
 $mainCol: #2c4058;
 
 @mixin title ($col , $bg) {
-    font-family: "GothamMedium",serif;
+    font-family: "GothamMedium";
     font-size: 44px;
     text-transform: uppercase;
     color: $col;
