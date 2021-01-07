@@ -383,7 +383,6 @@
 
 //   -------------SECTION ABOUT -------------------//
 .about {
-    // height: 100vh;
     margin-top: 90px;
     overflow: hidden;
     @media screen and (max-width: 870px) {
@@ -447,6 +446,7 @@
         margin-bottom: 60px;
         @media screen and (max-width: 870px) {
             text-align: center;
+            margin: 60px auto;
         }
     }
 }
@@ -464,6 +464,9 @@
             width: 485px;
             height: 370px;
         }
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
     }
     
 }
@@ -474,6 +477,9 @@
         background-color: rgb(85, 183, 255);
         left: -37%;
         bottom: 10%;
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
 }
 }
 .about__img--right {
@@ -482,7 +488,7 @@
         background-color: #7e5aff;
         right: -31%;
         bottom: 10%;
-     }
+    }
 }
 .about__right,
 .about__left {
@@ -498,7 +504,7 @@
     @media screen and (max-width: 870px) {
         text-align: center;
     }
- }
+}
 .about__left {
     margin-right: 70px;
     @media screen and (max-width: 870px){
@@ -525,7 +531,7 @@
       margin: 0px  0px  92px  0px;
     }
     @media screen and (max-width: 870px)  {
-        padding: 100px 0 118px;
+        padding: 68px 0 118px;
     }
 }
 .project-slide{
@@ -710,10 +716,16 @@
 
   .gallery {
     margin-top: 180px;
+    @media (max-width: 500px) {
+        margin-top: 80px;
+    }
     &__title {
     @include title ($mainCol ,$mainCol);
     margin: -10px 0px 92px 0px;
     position: relative;
+    @media (max-width: 500px) {
+        margin: -10px 0px 32px 0px;
+    }
     } 
     &__body{
         display: flex;
@@ -791,7 +803,7 @@
         } 
     }
     &__btn {
-        margin: 47px auto 40px;
+        margin: 40px auto;
     }
   }
 
@@ -950,13 +962,14 @@
     &__btn {
      @include btn;
       width: 140px;
-      margin: 0;
+    //   margin: 0;
       padding: 18px 30px;
       align-self: flex-end;
       outline: none;
   
       @media screen and (max-width: 600px) {
         align-self: center;
+        margin: 40px auto;
       }
     }
   }

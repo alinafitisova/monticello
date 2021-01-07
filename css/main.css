@@ -533,6 +533,12 @@ body {
   margin-left: -50px;
 }
 
+@media screen and (max-width: 425px) {
+  .about__title, .about__center {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 870px) {
   .about__title, .about__center {
     margin: 32px 0px 75px 0px;
@@ -637,6 +643,7 @@ body {
 @media screen and (max-width: 870px) {
   .about__btn {
     text-align: center;
+    margin: 60px auto;
   }
 }
 
@@ -663,12 +670,25 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .about__img--left::before,
+  .about__img--right::before {
+    display: none;
+  }
+}
+
 .about__img--left::before {
   content: '';
   display: block;
   background-color: #55b7ff;
   left: -37%;
   bottom: 10%;
+}
+
+@media screen and (max-width: 500px) {
+  .about__img--left::before {
+    display: none;
+  }
 }
 
 .about__img--right::before {
@@ -779,9 +799,15 @@ body {
   margin-left: -50px;
 }
 
+@media screen and (max-width: 425px) {
+  .projects__title {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 870px) {
   .projects {
-    padding: 100px 0 118px;
+    padding: 68px 0 118px;
   }
 }
 
@@ -1043,6 +1069,12 @@ body {
   margin-top: 180px;
 }
 
+@media (max-width: 500px) {
+  .gallery {
+    margin-top: 80px;
+  }
+}
+
 .gallery__title {
   font-family: "GothamMedium";
   font-size: 44px;
@@ -1066,6 +1098,18 @@ body {
   z-index: 5;
   text-align: center;
   margin-left: -50px;
+}
+
+@media screen and (max-width: 425px) {
+  .gallery__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery__title {
+    margin: -10px 0px 32px 0px;
+  }
 }
 
 .gallery__body {
@@ -1178,7 +1222,7 @@ body {
 }
 
 .gallery__btn {
-  margin: 47px auto 40px;
+  margin: 40px auto;
 }
 
 #map {
@@ -1306,6 +1350,12 @@ body {
   margin-left: -50px;
 }
 
+@media screen and (max-width: 425px) {
+  .contact__title {
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 824px) {
   .contact__title {
     margin: 0;
@@ -1419,7 +1469,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 140px;
-  margin: 0;
   padding: 18px 30px;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -1440,6 +1489,7 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin: 40px auto;
   }
 }
 
