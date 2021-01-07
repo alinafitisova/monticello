@@ -130,7 +130,7 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
         <section class="about" id="about1">
             <div class="container">
                 <h2 class="about__title">what we do</h2>
-                <div class="about__box">
+                <div class="about__box box1">
                     <div class="about__left">
                         <div class="about__img about__img--left"><img src="img/aboutLeft.jpg" alt="architecture"></div>
                     </div>
@@ -148,13 +148,6 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
                     <!-- /.about__right -->
                 </div>
                 <!-- /.about__box -->
-            </div>
-            <!-- /.container -->
-        </section>
-        <!-- /.about -->
-        <section class="about">
-            <div class="container">
-                <h2 class="about__title">what we do</h2>
                 <div class="about__box">
                     <div class="about__left">
                         <div class="about__column">
@@ -320,89 +313,93 @@ integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4
             <!-- /.container -->
         </section>
         <!-- /.gallery -->
-        <section id="map"></section>
-            <!-- /#map. -->
-        <section class="contact" id="contact">
-            <h2 class="contact__title">Get in touch</h2>
-            <div class="contact__inner">
-              <ul class="contact__left contact__list">
-                <li class="contact__list-item">
-                  <address class="contact__item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    91 Nolan Extensions Suite 670
-                  </address>
-                </li>
-                <!-- /.ontact__list-item -->
-                <li class="contact__list-item">
-                  <a class="contact__item" href="tel:+001 356-868-2454">
-                    <i class="fas fa-phone"></i>
-                    +001 356-868-2454
-                  </a>
-                </li>
-                <!-- /.ontact__list-item -->
-                <li class="contact__list-item">
-                  <a class="contact__item" href="mailto:gahuy93@gmail.com">
-                    <i class="fas fa-inbox"></i>
-                    gahuy93@gmail.com
-                  </a>
-                </li>
-                <!-- /.contact__list-item-->
-                <li class="contact__list-item">
-                  <time class="contact__item" datetime="00:00">
-                    <i class="far fa-clock"></i>
-                    From 07:05AM to 19:30PM
-                  </time>
-                </li>
-              </ul>
-              <!-- /.contact__left contact__list -->
-              <div class="contact__right">
-                <form class="contact__form" id="form" action="#" method="POST">
-                  <div class="contact__name-block">
-                    <label for="name" class="visually-hidden">Name</label>
-                    <input class="contact__form-name" type="text" name="name" id="name" placeholder="Name" required>
-                  </div>
-                   <!-- /.contact__name-block -->
-                  <div class="contact__email-block">
-                    <label for="email" class="visually-hidden">Email</label>
-                    <input class="contact__form-email" type="email" name="email" id="email" placeholder="Email" required>
-                  </div>
-                  <!-- /.contact__name-block -->
-                  <button class="contact__btn btn" type="submit">Submit</button>
-                </form>
-              </div>
-              <!-- /.contact__right -->
+        <section class="map">
+            <div id="map"></div>
+            <div class="contact" id="contact">
+                <h2 class="contact__title">Get in touch</h2>
+                <div class="contact__inner">
+                    <ul class="contact__left contact__list">
+                    <li class="contact__list-item">
+                        <address class="contact__item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            91 Nolan Extensions Suite 670
+                        </address>
+                    </li>
+                    <!-- /.ontact__list-item -->
+                    <li class="contact__list-item">
+                        <a class="contact__item" href="tel:+001 356-868-2454">
+                            <i class="fas fa-phone"></i>
+                            +001 356-868-2454
+                        </a>
+                    </li>
+                    <!-- /.ontact__list-item -->
+                    <li class="contact__list-item">
+                        <a class="contact__item" href="mailto:gahuy93@gmail.com">
+                            <i class="fas fa-inbox"></i>
+                            gahuy93@gmail.com
+                        </a>
+                    </li>
+                    <!-- /.contact__list-item-->
+                    <li class="contact__list-item">
+                        <time class="contact__item" datetime="00:00">
+                            <i class="far fa-clock"></i>
+                            From 07:05AM to 19:30PM
+                        </time>
+                    </li>
+                    </ul>
+                    <!-- /.contact__left contact__list -->
+                    <div class="contact__right">
+                    <form class="contact__form" id="form" action="#" method="POST">
+                        <div class="contact__name-block">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input class="contact__form-name" type="text" name="name" id="name" placeholder="Name" required>
+                        </div>
+                            <!-- /.contact__name-block -->
+                        <div class="contact__email-block">
+                        <label for="email" class="visually-hidden">Email</label>
+                        <input class="contact__form-email" type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <!-- /.contact__name-block -->
+                        <button class="contact__btn btn" type="submit">Submit</button>
+                    </form>
+                    </div>
+                    <!-- /.contact__right -->
+                </div>
+                <!-- /.contact__inner -->
             </div>
-            <!-- /.contact__inner -->
+            <!-- /.contact -->
         </section>
-        <!-- /.contact -->
+            <!-- /#map. -->
+        
     </main>
     <!-- /.main -->
     <footer class="footer" style="background: url('img/bGfooter.png') no-repeat top center / cover, linear-gradient(45deg, rgb(85,183,255) 0%, rgb(126,90,255) 100%)">
-  <div class="inner">
-    <div class="footer__main-block">
-        <a href="/" class="footer__logo logo">
-            <img src="img/Logo.svg" alt="logo"></a> 
-        <!-- /.footer__logo logo -->
-        <div class="socials">
-            <div class="socials__circle">
-                <a class="socials__icon" href="#"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer__inner">
+            <div class="footer__main-block">
+                <a href="/" class="footer__logo logo"><img src="img/Logo.svg" alt="logo"></a> 
+                <p class="footer__copyright">Copyrights © 2017 Monticello  |  Made with
+                    <i class="fas fa-heart"></i> by Ga Huy
+                </p>
             </div>
-            <div class="socials__circle">
-                <a class="socials__icon" href="#"><i class="fab fa-twitter"></i></a>
+            <!-- /.footer__main-block -->
+            <div class="footer__bottom-block">
+                <div class="footer__socials socials">
+                    <div class="socials__circle">
+                        <a class="socials__icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="socials__circle">
+                        <a class="socials__icon" href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="socials__circle">
+                        <a class="socials__icon" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- /.socials -->
             </div>
-            <div class="socials__circle">
-                <a class="socials__icon" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+        <!-- /.footer__bottom-block-->
         </div>
-        <!-- /.socials -->
-    </div>
-    <div class="footer__bottom-block">
-      <p class="footer__copyright">Copyrights &copy; 2017 Monticello</p>
-      <p class="footer__text">Made with <i class="fas fa-heart"></i> by Ga Huy</p>
-    </div>
-    <!-- /.footer__bottom-block-->
-  </div>
-</footer>
+        <!-- /.footer__inner-->
+    </footer>
 
 
 
