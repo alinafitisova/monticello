@@ -37,7 +37,7 @@
       max-width: 1180px;
       margin: auto;
       padding: 0 10px;
-      @media (max-width: 767px) {
+      @media (max-width: 1024px) {
           padding: 0 30px;
       }
   }
@@ -386,12 +386,17 @@
     // height: 100vh;
     margin-top: 90px;
     overflow: hidden;
-
+    @media screen and (max-width: 870px) {
+        margin-top: 40px;
+    }
     &__title ,
     &__center{
     @include title ($mainCol ,$mainCol);
     margin: 39px 0px 152px 0px;
     position: relative;
+    @media screen and (max-width: 870px) {
+        margin: 32px 0px 75px 0px;
+    }
     }   
     &__box {
     display: flex;
@@ -414,14 +419,20 @@
         color: $mainCol;
         text-transform: uppercase;
         font-size: 22px;
-        
+        margin: 0px  0px  0px  0px;
+        @media screen and (max-width: 870px) {
+            margin: 20px  0px;
+        }
     }
     &__center {
-        margin: 20px 0px 45px 0px;
+        margin: 5px 0px 25px 0px;
         text-align: left;
         &::before{
         content: '';
         display: none;
+        }
+        @media screen and (max-width: 870px) {
+            text-align: center;
         }
     }
     &__description {
@@ -434,6 +445,9 @@
     }
     &__btn {
         margin-bottom: 60px;
+        @media screen and (max-width: 870px) {
+            text-align: center;
+        }
     }
 }
 .about__img--left ,
@@ -446,7 +460,12 @@
         width: 585px;
         height: 470px;   
         z-index: -1;   
+        @media screen and (max-width: 1024px) {
+            width: 485px;
+            height: 370px;
+        }
     }
+    
 }
 .about__img--left{
     &::before{
@@ -467,18 +486,26 @@
 }
 .about__right,
 .about__left {
-    text-align: left;
+    // text-align: left;
     width: 50%;
     @media screen and (max-width: 870px) {
         width: 100%;
         text-align: center;
     }
 }
+.about__column {
+    text-align: left;
+    @media screen and (max-width: 870px) {
+        text-align: center;
+    }
+ }
 .about__left {
     margin-right: 70px;
     @media screen and (max-width: 870px){
         margin-right: 0;
+        text-align: center;
     }
+
 }
 .btn {
     @include btn;
@@ -496,6 +523,9 @@
     &__title {
       @include title (#fff, #fff);
       margin: 0px  0px  92px  0px;
+    }
+    @media screen and (max-width: 870px)  {
+        padding: 100px 0 118px;
     }
 }
 .project-slide{

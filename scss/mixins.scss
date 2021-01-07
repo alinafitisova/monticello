@@ -28,6 +28,9 @@ $mainCol: #2c4058;
     font-size: 18px;
     line-height: 30px;
     text-align: left;
+    @media screen and (max-width: 870px) {
+      text-align: center;
+    }
   }
   @mixin btn {
     font-family: 'GothamBook';
